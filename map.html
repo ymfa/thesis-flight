@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thesis==Flight</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <style>
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .title {
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+        margin: 5px 0;
+      }
+      .control {
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script src="map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=INSERT_YOUR_KEY&callback=initMap&libraries=geometry"
+    async defer></script>
+  </body>
+</html>

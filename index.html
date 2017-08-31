@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thesis==Flight</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <h1>Thesis==Flight</h1>
+    <form action="test.html" onsubmit="return fillValues()">
+      <div class="label">Origin:</div>
+      <input type="hidden" name="ay" value="51.507">
+      <input type="hidden" name="ax" value="-0.128">
+      <input id="pac-origin" type="text" value="London" placeholder="Where do you study?"><br>
+      <div class="label">Destination:</div>
+      <input type="hidden" name="by" value="31.230">
+      <input type="hidden" name="bx" value="121.474">
+      <input id="pac-destination" type="text" value="Shanghai" placeholder="Where is your hometown?"><br>
+      <div class="label">Target:</div>
+      <input id="target" type="text" placeholder="Target length of your thesis"><br>
+      <div class="label">Progress:</div>
+      <input type="hidden" name="f">
+      <input id="progress" type="text" placeholder="Current length of your thesis"><br>
+      <div class="label">Caption:</div>
+      <input id="caption" name="c" type="text" placeholder="Title of your map"><br>
+      <input class="submit" type="submit" value="Track my flight">
+      <input type="checkbox" class="checkbox" name="n" value="1"> Night flight
+    </form>
+    <div class="footer">
+      <a href="//github.com/ymfa/thesis-flight" target="_blank">Open GitHub repository</a>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=INSERT_YOUR_KEY&callback=initControls&libraries=places"
+    async defer></script>
+  </body>
+</html>
