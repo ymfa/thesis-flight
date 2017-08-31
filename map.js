@@ -2,7 +2,7 @@
 var query = {};
 location.search.substr(1).split("&").forEach(function(item){
   var parts = item.split("=");
-  if (parts[0] == 'c') query[parts[0]] = decodeURIComponent(parts[1]);
+  if (parts[0] == 'c') query[parts[0]] = decodeURIComponent(parts[1].replace(/\+/g, " "));
   else query[parts[0]] = parseFloat(parts[1]);
 });
 if (!(query['ay'] >= -85 && query['ay'] <= 85 && query['by'] >= -85 && query['by'] <= 85 && query['ax'] >= -180 && query['ax'] <= 180 && query['bx'] >= -180 && query['bx'] <= 180 && query['f'] >= 0 && query['f'] <= 1)){
