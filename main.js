@@ -27,10 +27,12 @@ function fillValues(){
   if (origin){
     form.ay.value = origin.lat().toFixed(3);
     form.ax.value = origin.lng().toFixed(3);
+    ga('set', 'dimension1', document.getElementById("pac-origin").value);
   }
   if (destination){
     form.by.value = destination.lat().toFixed(3);
     form.bx.value = destination.lng().toFixed(3);
+    ga('set', 'dimension2', document.getElementById("pac-destination").value);
   }
   return true;
 }
@@ -60,3 +62,10 @@ function initControls(){
     }
   });
 }
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105723042-1', 'auto');
+ga('send', 'pageview');
